@@ -16,7 +16,12 @@ http://localhost:8080/notification?message=KJNOTE
 Deployment to Elasticbeanstalk as a Docker Image.
 -------------------------------------------------
 
-Example URLs after deployment to AWS.
+Needs to add the following Role Policies to the Elasticbeanstalk Image Role:
+- AmazonSQSFullAccess
+- AmazonSNSFullAccess
+
+Example URLs after deployment to AWS
+------------------------------------
 http://postcodemessaging.elasticbeanstalk.com/health
 
 http://postcodemessaging.elasticbeanstalk.com/send?message=KJTEST
