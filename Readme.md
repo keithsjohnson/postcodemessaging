@@ -13,6 +13,10 @@ http://localhost:8080/send?message=KJTEST
 Send Notification Message:
 http://localhost:8080/notification?message=KJNOTE
 
+Deployment to Elasticbeanstalk as a Docker Image.
+-------------------------------------------------
+
+Example URLs after deployment to AWS.
 http://postcodemessaging.elasticbeanstalk.com/health
 
 http://postcodemessaging.elasticbeanstalk.com/send?message=KJTEST
