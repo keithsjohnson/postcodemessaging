@@ -14,15 +14,15 @@ import com.amazonaws.regions.Regions;
 @SpringBootApplication
 public class PostcodeMessagingMainApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PostcodeMessagingMainApplication.class, args);
-	}
-
 	@Value("${use.profile.credentials:false}")
 	private boolean useProfileCredentials = false;
 
 	@Value("${amazon.region:eu-west-1}")
 	private String amazonRegion;
+
+	public static void main(String[] args) {
+		SpringApplication.run(PostcodeMessagingMainApplication.class, args);
+	}
 
 	@Bean
 	public AWSCredentials amazonAWSCredentials() {
