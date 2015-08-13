@@ -1,4 +1,4 @@
-package uk.co.cdl.keithj.postcodemessaging.infrastructure;
+package uk.co.keithj.postcodemessaging.infrastructure;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.aws.messaging.config.annotation.NotificationMessage;

@@ -1,22 +1,22 @@
-package uk.co.cdl.keithj.postcodemessaging.action;
+package uk.co.keithj.postcodemessaging.action;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import uk.co.cdl.keithj.postcodemessaging.infrastructure.SQSProvider;
+import uk.co.keithj.postcodemessaging.infrastructure.SNSProvider;
 
 @RestController
-public class SendQueueMessageAction {
+public class SendNotificationMessageAction {
 
 	@Autowired
-	private SQSProvider sqsProvider;
+	private SNSProvider snsProvider;
 
-	@RequestMapping(value = "/send")
+	@RequestMapping(value = "/notification")
 	public @ResponseBody String send(String message) {
 
-		sqsProvider.send(message);
+		snsProvider.send(message);
 
 		return "OK";
 	}
